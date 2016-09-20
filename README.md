@@ -35,7 +35,7 @@ A. This README is formatted in GitHub markdown, please open it on GitHub. I will
 | **LICENSE.md**    | license    | n/a |
 | chembl\_drugs.txt    | ChEMBL drugs; downloaded from [ChEMBL](http://www.ebi.ac.uk/chembl/drugstore/), Dec 15 data freeze| 20/09/2016  |
 | chembl\_drugtargets.txt    | ChEMBL drug targets; downloaded from [ChEMBL](http://www.ebi.ac.uk/chembl/drug/targets/), Dec 15 data freeze, no manual edits| 20/09/2016  |
-| chembl\_uniprot\_mapping.txt    | ChEMBL uniprot mapping, chembl ID to UniProt codes; downloaded from the ChEMBL 18 release page: ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_18/|TBD     |  
+| chembl\_uniprot\_mapping.txt    | ChEMBL uniprot mapping, chembl ID to UniProt codes; downloaded from the ChEMBL 21 release page: fftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_21/chembl_uniprot_mapping_new.txt | 20/09/2016     |  
 |small\_molecule\_target\_ids\_all.csv    |   DrugBank Drug Target Identifier/Small Molecule Drugs; downloaded from [DrugBank](http://www.drugbank.ca/downloads#protein-identifiers) (if necessary, all\_target\_ids\_all.csv is also available) |TBD   |
 |  uniprot_pdb.csv  |  Uniprot to pdb mapping file; downloaded from [SIFTS](http://www.ebi.ac.uk/pdbe/docs/sifts/quick.html) (if necessary, a tsv version is also available)|TBD     |  
 |  lig\_pairs.lst  |   pdb to ligand mapping file; downloaded from [PDBsum downloads](http://www.ebi.ac.uk/thornton-srv/databases/cgi-bin/pdbsum/GetPage.pl?doc=TRUE&template=downloads.html&pdbcode=n/a) (if necessary, the het\_pairs.lst version is also available)  |  TBD | 
