@@ -89,10 +89,14 @@ import subprocess
 import itertools
 
 # izip_longest to split dictionaries into chunks (part 8)
-from itertools import izip_longest
+#from itertools import izip_longest
 
 # import other modules
 import sys, re, string, fnmatch, shutil
+
+# for http
+#The legacy urllib.urlopen function from 
+#Python 2.6 and earlier has been discontinued; urllib.request.urlopen() corresponds to the old urllib2.urlopen
 
 # for http
 from urllib2 import urlopen, HTTPError
@@ -337,7 +341,7 @@ def process_chembl(input_file):
   # get column number for two headers we want (chembl ids for mol and targets)
   col_mol_id = header_count(drug_targ[0], '\t', 'MOLECULE_CHEMBL_ID')
   col_targ_id = header_count(drug_targ[0], '\t', 'TARGET_CHEMBL_ID')
-  #logger.debug(col_targ_id)
+  #logger.info(col_mol_id)
 
   # empty dictionary
   chembl_target_drug_dic = {}
@@ -346,11 +350,13 @@ def process_chembl(input_file):
   # ie. small molecules, late clinical stages
   for i in range(1,len(drug_targ)):
     rowsplit = drug_targ[i].split("\t")
-    #logger.debug(rowsplit)
+    #logger.info(rowsplit)
 
     # get the chembl drug and target id values for the row
     chembl_drug_id = rowsplit[col_mol_id]
+    #logger.info(chembl_drug_id)
     chembl_target_id = rowsplit[col_targ_id]
+    #logger.info(chembl_target_id)
 
     # only proceed if the target id is not an empty field!
     if chembl_target_id  != "":
@@ -799,12 +805,19 @@ def expasy_dic(uniprot_list, filter_type):
   # dictionary
   final_dic = {}
 
+  #logger.info(len(uniprot_list))
+
   for entry in uniprot_list:
+    logger.info(entry)
     try:
-        # get handle
-        handle = ExPASy.get_sprot_raw(entry)
+        # get handle, below won't work for some reason
+        #handle = ExPASy.get_sprot_raw(entry)
+        handle = urlopen("http://www.uniprot.org/uniprot/" + entry + ".txt")
+        #urlretrieve(handle, "testdump.txt")
+        #logger.info(handle)
         # swissprot read
         record = SwissProt.read(handle)
+        #logger.info(record.description)
 
         # FILTER according to reviewed uniprot
         if filter_type == 'taxa':
@@ -822,6 +835,7 @@ def expasy_dic(uniprot_list, filter_type):
             final_dic[taxa_id] = entry_list
           
     except HTTPError:
+      logger.info(HTTPerror)
       pass
   
   return final_dic

@@ -159,7 +159,7 @@ model_seq = 'schma'
 # drug file from ChEMBL ('Browse drugs') 'chembl_drugs.txt'
 # number of drugs should be 10406
 # FOR TESTING, use 'chembl_drugs_test.txt'
-chembl_input = 'chembl_drugs_test.txt'
+chembl_input = 'chembl_drugs.txt'
 
 # define CHEMBL_TARGETS as the target file from ChEMBL ('Browse drug targets')
 # number of drugs associated with targets should be 2007

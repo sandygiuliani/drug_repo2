@@ -34,7 +34,7 @@ A. This README is formatted in GitHub markdown, please open it on GitHub. I will
 | **README.md**    | this readme file   | n/a |
 | **LICENSE.md**    | license    | n/a |
 | chembl\_drugs.txt    | ChEMBL drugs; downloaded from [ChEMBL](http://www.ebi.ac.uk/chembl/drugstore/), Dec 15 data freeze| 20/09/2016  |
-| chembl\_drugtargets.txt    | ChEMBL drug targets; downloaded from [ChEMBL](http://www.ebi.ac.uk/chembl/drug/targets/), Dec 15 data freeze, no manual edits| 20/09/2016  |
+| chembl\_drugtargets.txt    | ChEMBL drug targets; downloaded from [ChEMBL](http://www.ebi.ac.uk/chembl/drug/targets/), Dec 15 data freeze, fix newline character at 770/771 and 820/821 and 1263/1264 and 1386, 2109, 3180| 20/09/2016  |
 | chembl\_uniprot\_mapping.txt    | ChEMBL uniprot mapping, chembl ID to UniProt codes; downloaded from the ChEMBL 21 release page: fftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_21/chembl_uniprot_mapping_new.txt | 20/09/2016     |  
 |small\_molecule\_target\_ids\_all.csv    |   DrugBank Drug Target Identifier/Small Molecule Drugs; downloaded from [DrugBank](http://www.drugbank.ca/releases/5-0-1/downloads/target-all-polypeptide-ids) (note, this is the 'all', not just small molecule) release: 2016-07-01, version 5.0.1  | 20/09/2016   |
 |  uniprot_pdb.csv  |  Uniprot to pdb mapping file; downloaded from [SIFTS](http://www.ebi.ac.uk/pdbe/docs/sifts/quick.html) (if necessary, a tsv version is also available), generated 2016/09/10 | 20/09/2016     |  
@@ -49,7 +49,12 @@ A. This README is formatted in GitHub markdown, please open it on GitHub. I will
   
 
 ##Requirements   
-* BioPhython - Freely available on the [BioPython website](http://biopython.org/)(we have used release 1.64)  
+* BioPhython - Freely available on the [BioPython website](http://biopython.org/)(we have used release 1.68). Modify swissprot __init__.py to fix uniprot brackets problem like so:
+def _read_rn(reference, rn_temp):  
+    rn_split = rn_temp.split()  
+    rn = rn_split[0]  
+    assert rn[0] == '[' and rn[-1] == ']', "Missing brackets %s" % rn  
+    reference.number = int(rn[1:-1])    
 * ArchIndex/ArchSchema - kindly provided by Dr Laskowski. For more information, please visit the [ArchSchema website](http://www.ebi.ac.uk/thornton-srv/databases/archschema), or read the [main reference for ArchSchema](http://www.ncbi.nlm.nih.gov/pubmed/20299327)  
 * SMSD (Small Molecule Subgraph Detector). For more information, please visit the [SMSD website](http://www.ebi.ac.uk/thornton-srv/software/SMSD/), the [GitHub repository](https://github.com/asad/SMSD), or read the [main reference for SMSD](http://www.jcheminf.com/content/1/1/12)  
 * MODELLER, for homology modelling (only for step 10). See [MODELLER website](https://salilab.org/modeller/)  
