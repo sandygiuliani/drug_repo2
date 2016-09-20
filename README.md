@@ -41,9 +41,9 @@ A. This README is formatted in GitHub markdown, please open it on GitHub. I will
 |  lig\_pairs.lst  |   pdb to ligand mapping file; downloaded from [PDBsum downloads](http://www.ebi.ac.uk/thornton-srv/databases/cgi-bin/pdbsum/GetPage.pl?doc=TRUE&template=downloads.html&pdbcode=n/a) (if necessary, the het\_pairs.lst version is also available)  |  20/09/2016 | 
 |  Components-smiles-oa.smi  |   chemical components dictionary in smiles format (OpenEye); downloaded from [RCSB Ligand Expo Downloads](http://ligand-expo.rcsb.org/ld-download.html), in the SMILES/InChi data files (if necessary, stereo versions and CACTVS-generated versions available)  |  20/09/2016 | 
 |  pointless_het.csv  |  contains list of 'pointless' het ligands, including aminoacids, nucleotides, metals and crystallographic solvets/aids, copied across from drug_repo  |  n/a | 
-|all.sdf|DrugBank drugs in sdf format; downloaded from [DrugBank](http://www.drugbank.ca/releases/5-0-1/downloads/all-structures)2016-07-01, | 20/09/2016 |
-|speclist.txt| taxonomic codes and mnemonic codes for all species; downloaded from [UniProt](http://www.uniprot.org/docs/speclist.txt)|TBD|  
-|pdb_pfam_mapping.txt| PDB IDs to Pfam domains and residue numbers; downloaded from ftp://ftp.ebi.ac.uk/pub/databases/Pfam/mappings/| TBD |  
+|all.sdf|DrugBank drugs in sdf format; downloaded from [DrugBank](http://www.drugbank.ca/releases/5-0-1/downloads/all-structures)release: 2016-07-01, version 5.0.1 | 20/09/2016 |
+|speclist.txt| taxonomic codes and mnemonic codes for all species; downloaded from [UniProt](http://www.uniprot.org/docs/speclist.txt) Release: 2016_08, 07-Sep-2016| 20/09/2016 |  
+|pdb_pfam_mapping.txt| PDB IDs to Pfam domains and residue numbers; downloaded from [EBI](ftp://ftp.ebi.ac.uk/pub/databases/Pfam/mappings/), release: 10/30/15| 20/09/2016 |  
   
 
   
@@ -53,7 +53,7 @@ A. This README is formatted in GitHub markdown, please open it on GitHub. I will
 * ArchIndex/ArchSchema - kindly provided by Dr Laskowski. For more information, please visit the [ArchSchema website](http://www.ebi.ac.uk/thornton-srv/databases/archschema), or read the [main reference for ArchSchema](http://www.ncbi.nlm.nih.gov/pubmed/20299327)  
 * SMSD (Small Molecule Subgraph Detector). For more information, please visit the [SMSD website](http://www.ebi.ac.uk/thornton-srv/software/SMSD/), the [GitHub repository](https://github.com/asad/SMSD), or read the [main reference for SMSD](http://www.jcheminf.com/content/1/1/12)  
 * MODELLER, for homology modelling (only for step 10). See [MODELLER website](https://salilab.org/modeller/)  
-* arch_schema_cath.tsv (UniProt IDs to CATH domains and residue numbers), to be downloaded from ftp://ftp.biochem.ucl.ac.uk/pub/gene3d_data/CURRENT_RELEASE/  
+* arch_schema_cath.tsv (UniProt IDs to CATH domains and residue numbers), to be downloaded from ftp://ftp.cbi.edu.cn/pub/database/gene3d/ (downloaded on 20/09/2016)  
 
 
 ##Instructions  

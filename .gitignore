@@ -1,0 +1,32 @@
+# files for git to ignore #
+###########################
+
+# my log
+log_drug_repo.log
+
+# sdf files - often to big
+# *.sdf
+
+# pickles
+*.p
+
+# pickles backupfolders
+pickles_*/
+
+# anything containing 'test'
+*test*
+
+
+# .pyc files
+*.pyc
+
+# output files
+dr_*
+
+# various extensions produced by modeller
+*.ini
+*.rsr
+*.sch
+
+# arch_schema_cath
+arch_schema_cath.tsv
