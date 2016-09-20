@@ -40,7 +40,7 @@ A. This README is formatted in GitHub markdown, please open it on GitHub. I will
 |  uniprot_pdb.csv  |  Uniprot to pdb mapping file; downloaded from [SIFTS](http://www.ebi.ac.uk/pdbe/docs/sifts/quick.html) (if necessary, a tsv version is also available), generated 2016/09/10 | 20/09/2016     |  
 |  lig\_pairs.lst  |   pdb to ligand mapping file; downloaded from [PDBsum downloads](http://www.ebi.ac.uk/thornton-srv/databases/cgi-bin/pdbsum/GetPage.pl?doc=TRUE&template=downloads.html&pdbcode=n/a) (if necessary, the het\_pairs.lst version is also available)  |  20/09/2016 | 
 |  Components-smiles-oa.smi  |   chemical components dictionary in smiles format (OpenEye); downloaded from [RCSB Ligand Expo Downloads](http://ligand-expo.rcsb.org/ld-download.html), in the SMILES/InChi data files (if necessary, stereo versions and CACTVS-generated versions available)  |  20/09/2016 | 
-|  pointless_het.csv  |  contains list of 'pointless' het ligands, including aminoacids, nucleotides, metals and crystallographic solvets/aids     |  n/a | 
+|  pointless_het.csv  |  contains list of 'pointless' het ligands, including aminoacids, nucleotides, metals and crystallographic solvets/aids, copied across from drug_repo  |  n/a | 
 |all.sdf|DrugBank drugs in sdf format; downloaded from [DrugBank](http://www.drugbank.ca/downloads#structures)|16/07/2014 |
 |speclist.txt| taxonomic codes and mnemonic codes for all species; downloaded from [UniProt](http://www.uniprot.org/docs/speclist.txt)|TBD|  
 |pdb_pfam_mapping.txt| PDB IDs to Pfam domains and residue numbers; downloaded from ftp://ftp.ebi.ac.uk/pub/databases/Pfam/mappings/| TBD |  
