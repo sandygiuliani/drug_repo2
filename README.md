@@ -48,7 +48,7 @@ A. This README is formatted in GitHub markdown, please open it on GitHub. I will
 
   
 
-##Requirements   
+## Requirements   
 * Python 2.6.9  
 * BioPhython 1.6.8 - Freely available on the [BioPython website](http://biopython.org/). Modify swissprot __init__.py to fix uniprot brackets problem like so:
 def _read_rn(reference, rn_temp):  
@@ -62,23 +62,23 @@ def _read_rn(reference, rn_temp):
 * arch_schema_cath.tsv (UniProt IDs to CATH domains and residue numbers), to be downloaded from ftp://ftp.cbi.edu.cn/pub/database/gene3d/ (downloaded on 20/09/2016)  
 
 
-##Instructions  
+## Instructions  
 * clone the repository  
 * check requirements
 * modify the config.py file according to your needs  
 * run the script (>python drug_repo.py)
   
 
-##License  
+## License  
 Copyright &copy; 2016 Sandra Giuliani  
 This repository is licensed under the terms of the MIT license. Please see the [license file](LICENSE.md) for more information. The MIT license is approved by the [Open Source Initiative](http://opensource.org/licenses)  
   
 
 
-##Disclaimer   
+## Disclaimer   
 THIS IS A WORK IN PROGRESS.  This is version 2 of the original [drug_repo](https://github.com/sandygiuliani/drug_repo).  
   
 
-##Contact     
+## Contact     
 Feedback is very welcome, please drop me a line at: sandraxgiuliani [at] gmail [dot] com  
 You might also want to follow me on Twitter [@sandygiuliani](https://twitter.com/sandygiuliani) or visit my [personal website](http://www.sandragiuliani.com/).  
