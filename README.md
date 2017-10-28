@@ -22,7 +22,7 @@ A. A very nasty parasitic disease affecting over 200 million people. Learn more 
 Q. How does the tool work?  
 A. By mapping! known drugs -> their targets -> their domain architecture -> parasite targets  
 Q. I am reading this README on my local machine, why is the formatting all weird?  
-A. This README is formatted in GitHub markdown, please open it on GitHub. I will include an instructions-only plain text readme soon  
+A. This README is formatted in GitHub markdown, please open it on GitHub. 
   
 
 ## <a name="contents-of-repository"></a>Contents of repository
