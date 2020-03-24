@@ -3228,7 +3228,7 @@ def main():
     ###
     # get list of uniprot from dic above
     uniprot_w_lig_list = uniprot_pdb_w_lig.keys()
-    logger.info(uniprot_w_lig_list)
+    #logger.info(uniprot_w_lig_list)
 
     ###
 
@@ -3339,7 +3339,7 @@ def main():
       # this is all the drugs in the map, pointing to the cc in the pdbs of
       # of their targets
       chembl_to_cc = merge_dic(chembl_dic,uniprot_filt, pdb_cc_dic)
-      logger.info(chembl_to_cc)
+      #logger.info(chembl_to_cc)
 
 
       logger.info('We have filtered out the ChEMBL drugs that ' +
@@ -3376,7 +3376,7 @@ def main():
                                     chembl_id_smi_opt, cc_smi_filt,
                                     "pair_2dic", c.sim_threshold, 
                                     chembl_to_cc)
-      logger.info(chembl_cluster)
+      #logger.info(chembl_cluster)
       # move output file to current dir
       mv_file(c.smsd_path, 'smsd_run_pair_2dic.txt', 
               c.chembl_clust_sim_scores)
@@ -3630,6 +3630,9 @@ def main():
                   str(len(chembl_filt_map)) + ' ' + c.dataset_dic['A'] +
                   ' drugs, mapped to ' + str(len(chembl_schis_filt_targ)) +
                   ' ' + species_string + ' targets.')
+      logger.info(chembl_filt_map)
+      #testlist = list(set(chembl_schis_filt_targ))
+      #logger.info(len(testlist))
 
     else:
       pass
@@ -3688,6 +3691,7 @@ def main():
                   ' drugs, mapped to '
                   + str(len(drugbank_schis_filt_targ)) +
                   ' ' + species_string + ' targets.')
+      #logger.info(drugbank_schis_filt_targ)
 
     else:
       pass
